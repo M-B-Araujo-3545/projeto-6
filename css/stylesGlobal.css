@@ -1,0 +1,357 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* --- HEADER E NAVEGAÇÃO --- */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+/* Menu Desktop */
+nav {
+    background-color: #2c3e50; /* Cor escura profissional */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Cor de destaque (laranja/ouro) */
+}
+
+/* Esconder botão hambúrguer no Desktop */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.4s;
+}
+
+/* --- CONTAINER PRINCIPAL (Logo e Pesquisa) --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between; /* FB Moveis esquerda, Pesquisa direita */
+    align-items: center;
+}
+
+.cabecalho h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* Barra de Pesquisa */
+.barraPesquisa {
+    display: flex;
+}
+
+.barraPesquisa input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 250px;
+}
+
+.barraPesquisa button {
+    padding: 10px 15px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.barraPesquisa button:hover {
+    background-color: #34495e;
+}
+
+/* Slogan */
+.slogan {
+    text-align: center;
+    padding-bottom: 15px;
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 768px) {
+    
+    /* Ajuste do Container (Logo e Pesquisa) */
+    .container {
+        flex-direction: column; /* Um embaixo do outro no celular */
+        gap: 15px;
+        text-align: center;
+    }
+
+    .barraPesquisa input {
+        width: 100%; /* Ocupa a largura disponível */
+    }
+
+    /* Menu Hambúrguer */
+    nav {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: flex; /* Aparece no celular */
+    }
+
+    nav ul {
+        display: none; /* Esconde a lista */
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        z-index: 1000;
+        padding: 20px 0;
+        gap: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        display: block;
+        border-bottom: 1px solid #34495e;
+    }
+
+    /* Quando clicar no menu (Classe active via JS) */
+    nav.active ul {
+        display: flex;
+    }
+
+    /* Animação do ícone Hambúrguer para X */
+    nav.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    nav.active .bar:nth-child(2) { opacity: 0; }
+    nav.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* --- OUTROS ESTILOS GLOBAIS --- */
+main {
+    padding: 20px;
+
+}
+.lista-produtos {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Adições: cards de produtos simples */
+.lista-produto {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  padding: 1rem;
+}
+.produto-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.produto-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.produto-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.produto-card .preco {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.produto-card button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.produto-link { color:inherit; display:block; text-decoration:none; }
+.produto-thumb img { display:block; width:100%; height:auto; object-fit:cover; }
+.produto-info { padding:0.75rem; }
+.produto-title { font-size:1rem; margin:0 0 0.25rem; }
+.produto-desc { font-size:0.9rem; color:#555; margin:0 0 0.5rem; }
+.produto-meta { display:flex; justify-content:space-between; align-items:center; gap:0.5rem; }
+.produto-price { font-weight:700; color:#222; }
+.produto-condition {
+  display:inline-block;
+  background: #f1c40f;
+  color: #111;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+/* Centraliza e limita largura da vitrine */
+.lista-produto { max-width: 1200px; margin: 40px auto; }
+
+/* Estilos da página de detalhe */
+.container-detalhe {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+.coluna-foto { display:flex; align-items:flex-start; justify-content:center; }
+.coluna-foto img { max-width: 100%; height: auto; border-radius: 6px; }
+.coluna-info { padding: 0 10px; }
+.coluna-info h1 { margin-bottom: 8px; font-size: 1.6rem; color: #2c3e50; }
+.fabricante-label { color: #555; margin-bottom: 8px; display:block; }
+#preco-produto { font-size: 1.6rem; color: #e74c3c; font-weight:700; margin: 12px 0; }
+.bloco { margin-top: 12px; }
+.btn-comprar { background: #25D366; color:#fff; border:none; padding: 12px 18px; border-radius:6px; cursor:pointer; font-weight:600; display:inline-block; margin-top:12px; }
+.btn-comprar:hover { filter: brightness(0.95); }
+
+@media (max-width: 768px) {
+  .container-detalhe { grid-template-columns: 1fr; padding: 15px; }
+  .produto-card img { height: 180px; }
+}
+
+.loading, .placeholder, .empty { padding:1rem; text-align:center; color:#666; }
+
+/* Galeria de Miniaturas */
+.galeria-miniaturas {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.miniatura {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.miniatura.ativa { border-color: #2c3e50; opacity: 0.8; }
+
+/* Seleção de Cores */
+.container-cores {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.bola-cor {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 1px #ddd;
+    transition: 0.2s;
+}
+
+.bola-cor.ativa { box-shadow: 0 0 0 2px #2c3e50; transform: scale(1.1); }
+/* Container dos botões de texto */
+.selecao-cores-texto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Botão de cor por extenso */
+.botao-cor-texto {
+    background-color: #fff;
+    color: #2c3e50;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.botao-cor-texto:hover {
+    border-color: #2c3e50;
+    background-color: #f9f9f9;
+}
+
+.botao-cor-texto.ativo {
+    background-color: #2c3e50;
+    color: #fff;
+    border-color: #2c3e50;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

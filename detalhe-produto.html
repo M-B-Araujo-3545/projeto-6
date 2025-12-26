@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fb Moveis | home</title>
+    <!-- Preload CSS para reduzir bloqueio de renderização -->
+    <link rel="preload" href="css/stylesGlobal.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/stylesGlobal.css"></noscript>
+</head>
+<body>
+    <header>
+    <nav id="navMenu">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtoNovos.html">Produto Novo</a></li>
+            <li><a href="produtoUsado.html">Produtos Usados</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="cabecalho">
+            <h1>Fb Moveis</h1>
+        </div>
+        <div class="barraPesquisa">
+            <input type="text" placeholder="Pesquisar produto">
+            <button type="submit">Pesquisar</button>
+        </div>
+    </div>
+
+    <div class="slogan">
+        <p>Seu conforto é nossa prioridade</p>
+    </div>
+</header>
+    <main class="container-detalhe" id="detalhe-container">
+        <div class="coluna-foto">
+            <div style="width: 100%;">
+                <img id="foto-principal" src="" alt="Produto Principal">
+                <div id="miniaturas-container" class="galeria-miniaturas"></div>
+            </div>
+        </div>
+
+        <div class="coluna-info">
+            <h1 id="nome-produto">Carregando...</h1>
+            <p class="fabricante-label">Fabricante: <span id="fabricante"></span></p>
+            <p class="preco" id="preco-produto"></p>
+
+            <div class="bloco">
+                <h3>Cores Disponíveis</h3>
+                <div id="container-cores" class="selecao-cores-texto"></div>
+            </div>
+
+            <div class="bloco">
+                <h3>Descrição</h3>
+                <p id="descricao-produto"></p>
+            </div>
+
+            <div class="bloco">
+                <h3>Dimensões</h3>
+                <ul>
+                    <li>Altura: <span id="altura"></span></li>
+                    <li>Largura: <span id="largura"></span></li>
+                    <li>Profundidade: <span id="profundidade"></span></li>
+                </ul>
+            </div>
+
+            <div class="bloco">
+                <h3>Formas de Pagamento</h3>
+                <ul id="pagamentos"></ul>
+            </div>
+
+            <button class="btn-comprar">Finalizar no WhatsApp</button>
+        </div>
+    </main>
+    <script>
+    function toggleMenu() {
+        // Seleciona o elemento nav e adiciona/remove a classe 'active'
+        const nav = document.getElementById('navMenu');
+        nav.classList.toggle('active');
+    }
+</script>
+
+    <script src="js/detalhe-produto.js" defer></script>
+</body>
+</html>

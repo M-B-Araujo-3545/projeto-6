@@ -1,0 +1,60 @@
+[
+
+  {
+    "id": "2001",
+    "name": "APARADOR BELÍSSIMA",
+    "valor": 440.00,
+    "imageUrl": ["img/p2001/a2001.png", "img/p2001/b2001.png", "img/p2001/c2001.png", "img/p2001/d2001.png"],
+    "fabricante": "Valde Móveis",
+    "description": "O Aparador Belíssima é um móvel compacto que une praticidade de armazenamento e elegância decorativa.",
+    "dimensoes": { "altura": "85cm", "largura": "120cm", "profundidade": "36cm" },
+    "formasPagamento": ["Pix", "Cartão", "Boleto"],
+    "variacoes": [
+      { "cor": "Cinamomo", "id": "2021", "hex": "#D47E30" },
+      { "cor": "Cinamomo/Off White", "id": "2021-1", "hex": "#e1d8c4" }
+    ]
+  },
+
+  {
+    "id": "2002",
+    "name": "APARADOR 4000 ",
+    "valor": 389.00,
+    "imageUrl": ["img/img2002/id-2002-a.png", "img/img2002/id-2002-b.png", "img/img2002/id-2002-c.png", "img/img2002/id-2002-d.png"],
+    "fabricante": "JB Bechara",
+    "description": "O Aparador 4000 é um móvel compacto, ideal para ambientes menores ou para quem busca praticidade sem ocupar muito espaço.",
+    "dimensoes": { "altura": "74,5cm", "largura": "70cm", "profundidade": "36cm" },
+    "formasPagamento": ["Pix", "Cartão","Boleto"],
+    "variacoes": [
+      { "cor": "Nature/Off White", "id": "", "hex": "#000080" },
+      { "cor": "Off White", "id": "", "hex": "#e1d8c4" }
+    ]
+  },
+  {
+    "id": "2003",
+    "name": "Sofá Retrátil Azul",
+    "valor": 1500.00,
+    "imageUrl": ["img/id2020.png", "img/id2020.png"],
+    "fabricante": "Fb Móveis",
+    "description": "Sofá de alta qualidade...",
+    "dimensoes": { "altura": "90cm", "largura": "200cm", "profundidade": "100cm" },
+    "formasPagamento": ["Pix", "Cartão"],
+    "variacoes": [
+      { "cor": "Azul Marinho", "id": "2020", "hex": "#000080" },
+      { "cor": "Cinza Chumbo", "id": "3030", "hex": "#4F4F4F" }
+    ]
+  },
+  {
+    "id": "2004",
+    "name": "Sofá Retrátil Azul",
+    "valor": 1500.00,
+    "imageUrl": ["img/id2020.png", "img/id2020.png"],
+    "fabricante": "Fb Móveis",
+    "description": "Sofá de alta qualidade...",
+    "dimensoes": { "altura": "90cm", "largura": "200cm", "profundidade": "100cm" },
+    "formasPagamento": ["Pix", "Cartão"],
+    "variacoes": [
+      { "cor": "Azul Marinho", "id": "2020", "hex": "#000080" },
+      { "cor": "Cinza Chumbo", "id": "3030", "hex": "#4F4F4F" }
+    ]
+  }
+]
