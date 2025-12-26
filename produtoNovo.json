@@ -1,7 +1,7 @@
 [
 
   {
-    "id": "2001",
+    "id": "2000",
     "name": "APARADOR BELÍSSIMA",
     "valor": 440.00,
     "imageUrl": ["img/p2001/a2001.png", "img/p2001/b2001.png", "img/p2001/c2001.png", "img/p2001/d2001.png"],
@@ -57,4 +57,5 @@
       { "cor": "Cinza Chumbo", "id": "3030", "hex": "#4F4F4F" }
     ]
   }
+
 ]
